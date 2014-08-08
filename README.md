@@ -4,10 +4,10 @@ practicas-Fundamentos-Programacion
 Conjunto de programas de las practicas de Fundamentos de programación de la universidad de granada. A continuación mostramos los ejercicios resueltos:   
 
 Ejercicios tema 9-Recursividad: 	
-
     -Ejercicios 1,2   
 
 Guion de practicas 3-condicionales: 
+    
     -Ejercicios 1,6,8,10  
 
 Guion de practicas 5-bubles: 	
