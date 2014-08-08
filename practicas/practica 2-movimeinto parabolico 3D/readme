@@ -1,0 +1,62 @@
+(C) Programmed by:
+   Antonio Jimenez Martínez
+
+
+Practica Fundamentos de programacion: Practicas 2
+Version:0.1
+
+EJERCICIOM: Movimiento parabolico 3D
+Puede considerar que vamos a simular el lanzamiento de un proyectil desde un punto terrestre (un punto en el plano), y
+deseamos saber en qué otro punto va a impactar. Para determinar el lanzamiento es necesario:
+
+1. Velocidad de lanzamiento. Es un número v expresado en metros por segundo.
+
+2. Elevación de disparo. Elevación del cañón. Es un número  expresado en grados.
+
+3. Rotación del cañón. Se refiere a la rotación que aplicamos al cañón para determinar la dirección hacia la que se
+	va a realizar el disparo. Podemos suponer que el ángulo cero se refiere al norte, y que éste está alineado con el
+	eje Y del plano. Es un número  expresado en grados.
+
+Si aplicamos las ecuaciones básicas de física y operamos podemos obtener las siguientes expresiones:
+
+1. Tiempo de vuelo=(2*v*sin())/g
+2. Altura maxima=((v*sin())²)/2*g
+3. Alcance del proyectil=(v²*sin(2*))/g
+
+En esta práctica se propone resolver el problema de localizar el punto de impacto  xf , yf  a partir de:
+
+1. Posición del cañón. Dos parámetros  x0, y0  que determinan la localización del cañón en el plano XY.
+2. Parámetros de lanzamiento. Compuestos por los valores v ,  ,  descritos anteriormente.
+
+Se puede establecer un sistema para medir si el proyectil ha impactado en un objetivo o no. Si fijamos un objetivo en el
+punto  xt , yt  podemos calcular la distancia del punto de impacto como:
+d= ( xf − xt ² yf − yt ²)^(1/2)
+
+Lógicamente, si la distancia es cero es que hemos alcanzado el objetivo. En la práctica, será muy difícil conseguirlo, ya
+que incluso por los errores de aproximación es muy complicado que se obtengan valores idénticos. Además, es más
+realista suponer que se ha conseguido un impacto aun siendo esa distancia algo mayor que cero. Así, catalogaremos el
+nivel de éxito de los disparos en una de estas categorías:
+
+1. Impacto directo. Si el impacto se ha producido a menos de d0 metros del objetivo.
+2. Impacto parcial. Si el impacto se ha producido entre d 0 y d1 metros del objetivo.
+3. No hay impacto. Si el impacto ha sido a más de d1 metros del objetivo.
+
+Restricciones:
+
+1. El parámetro de elevación tiene que estar en el rango [0-90]. En caso de no ser así, el programa debe terminar
+	indicando que no es posible realizar el lanzamiento.
+
+2. La velocidad de lanzamiento debe ser positiva. En caso de no ser así, el programa debe terminar indicando que
+   la velocidad no es correcta.
+3. Los parámetros de rotación deben estar normalizados en el rango [-180o,180o]. En caso de no ser así, el
+	programa debe recalcularlos para convertirlos en su valor equivalente dentro de este rango. Tenga en cuenta
+	que podemos sumar o restar 360o tantas veces como sea necesario obteniendo ángulos equivalentes.
+4. El resultado del programa debe incluir un informe de los datos de entrada, expresados en las mismas unidades y con los
+	ángulos normalizados, junto con los valores de distancia recorrida por el proyectil, tiempo de vuelo, altura máxima, y
+	punto de impacto.
+5. Una vez realizado el informe, deberá preguntar por un objetivo, es decir, por un punto
+	 xt , yt  así como por dos valores d0, d1 e indicar el resultado del impacto. 
+6. Además, en caso de que alguno sea negativo, terminará con el correspondiente mensaje de error.
+
+
+
